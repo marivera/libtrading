@@ -60,8 +60,8 @@ struct itch50_message {
 /* ITCH50_MSG_SYSTEM_EVENT */
 struct itch50_msg_system_event {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	char			EventCode;	/* ITCH50_EVENT_<code> */
 } __attribute__((packed));
@@ -69,8 +69,8 @@ struct itch50_msg_system_event {
 /* ITCH50_MSG_STOCK_DIRECTORY */
 struct itch50_msg_stock_directory {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	char			Stock[8];
 	char			MarketCategory;
@@ -91,8 +91,8 @@ struct itch50_msg_stock_directory {
 /* ITCH50_MSG_STOCK_TRADING_ACTION */
 struct itch50_msg_stock_trading_action {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	char			Stock[8];
 	char			TradingState;
@@ -103,8 +103,8 @@ struct itch50_msg_stock_trading_action {
 /* ITCH50_MSG_REG_SHO_RESTRICTION */
 struct itch50_msg_reg_sho_restriction {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	char			Stock[8];
 	char			RegSHOAction;
@@ -113,8 +113,8 @@ struct itch50_msg_reg_sho_restriction {
 /* ITCH50_MSG_MARKET_PARTICIPANT_POS */
 struct itch50_msg_market_participant_pos {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	char			MPID[4];
 	char			Stock[8];
@@ -126,8 +126,8 @@ struct itch50_msg_market_participant_pos {
 /* ITCH50_MSG_MWCB_DECLINE_LEVEL */
 struct itch50_msg_mwcb_decline_level {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			Level1;
 	be64			Level2;
@@ -137,8 +137,8 @@ struct itch50_msg_mwcb_decline_level {
 /* ITCH50_MSG_MWCB_STATUS */
 struct itch50_msg_mwcb_status {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	char			BreachedLevel;
 } __attribute__((packed));
@@ -146,8 +146,8 @@ struct itch50_msg_mwcb_status {
 /* ITCH50_MSG_IPO_QUOTING_PERIOD_UPDATE */
 struct itch50_msg_ipo_quoting_period_update {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	char			Stock[8];
 	be32			IPOQuotationReleaseTime;
@@ -158,8 +158,8 @@ struct itch50_msg_ipo_quoting_period_update {
 /* ITCH50_MSG_ADD_ORDER */
 struct itch50_msg_add_order {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			OrderReferenceNumber;
 	char			BuySellIndicator;
@@ -171,8 +171,8 @@ struct itch50_msg_add_order {
 /* ITCH50_MSG_ADD_ORDER_MPID */
 struct itch50_msg_add_order_mpid {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			OrderReferenceNumber;
 	char			BuySellIndicator;
@@ -185,8 +185,8 @@ struct itch50_msg_add_order_mpid {
 /* ITCH50_MSG_ORDER_EXECUTED */
 struct itch50_msg_order_executed {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			OrderReferenceNumber;
 	be32			ExecutedShares;
@@ -196,8 +196,8 @@ struct itch50_msg_order_executed {
 /* ITCH50_MSG_ORDER_EXECUTED_WITH_PRICE */
 struct itch50_msg_order_executed_with_price {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			OrderReferenceNumber;
 	be32			ExecutedShares;
@@ -209,8 +209,8 @@ struct itch50_msg_order_executed_with_price {
 /* ITCH50_MSG_ORDER_CANCEL */
 struct itch50_msg_order_cancel {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			OrderReferenceNumber;
 	be32			CanceledShares;
@@ -219,8 +219,8 @@ struct itch50_msg_order_cancel {
 /* ITCH50_MSG_ORDER_DELETE */
 struct itch50_msg_order_delete {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			OrderReferenceNumber;
 } __attribute__((packed));
@@ -228,8 +228,8 @@ struct itch50_msg_order_delete {
 /* ITCH50_MSG_ORDER_REPLACE */
 struct itch50_msg_order_replace {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			OriginalOrderReferenceNumber;
 	be64			NewOrderReferenceNumber;
@@ -240,8 +240,8 @@ struct itch50_msg_order_replace {
 /* ITCH50_MSG_TRADE */
 struct itch50_msg_trade {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			OrderReferenceNumber;
 	char			BuySellIndicator;
@@ -254,8 +254,8 @@ struct itch50_msg_trade {
 /* ITCH50_MSG_CROSS_TRADE */
 struct itch50_msg_cross_trade {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			Shares;
 	char			Stock[8];
@@ -267,8 +267,8 @@ struct itch50_msg_cross_trade {
 /* ITCH50_MSG_BROKEN_TRADE */
 struct itch50_msg_broken_trade {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			MatchNumber;
 } __attribute__((packed));
@@ -276,8 +276,8 @@ struct itch50_msg_broken_trade {
 /* ITCH50_MSG_NOII */
 struct itch50_msg_noii {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	be64			PairedShares;
 	be64			ImbalanceShares;
@@ -293,8 +293,8 @@ struct itch50_msg_noii {
 /* ITCH50_MSG_RPII */
 struct itch50_msg_rpii {
 	u8			MessageType;
-        be16			StockLocate;
-        be16			TrackingNumber;
+	be16			StockLocate;
+	be16			TrackingNumber;
 	u8			Timestamp[6];
 	char			Stock[8];
 	char			InterestFlag;
